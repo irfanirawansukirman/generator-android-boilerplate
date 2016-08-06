@@ -34,7 +34,7 @@ describe('generator-android-boilerplate:app', function () {
       'app/.gitignore',
       'app/build.gradle',
       'app/proguard-rules.pro',
-      'app/src/main/java/com/sample/mvp/BoilerplateApplication.java',
+      'app/src/main/java/com/sample/boilerplate/BoilerplateApplication.java',
       'app/src/main/AndroidManifest.xml'
     ]);
   });
