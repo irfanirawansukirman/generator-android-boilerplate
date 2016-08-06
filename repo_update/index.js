@@ -8,11 +8,9 @@ const replace = require("replace");
 const filter = require('filter-files');
 const findInFiles = require('find-in-files');
 
-// Clone a given repository into the `./tmp` folder.
 rimraf.sync(__dirname + '../generators/app/templates')
 
 Git.Clone("https://github.com/ribot/android-boilerplate", "../generators/app/templates")
-  // Look up this known commit.
   .then(function(repo) {
     console.log("Completed cloning");
 
@@ -23,8 +21,6 @@ Git.Clone("https://github.com/ribot/android-boilerplate", "../generators/app/tem
       recursive: true,
       silent: false,
     });
-
-
   })
   .catch(function(err) {
     console.log(err);

@@ -1,11 +1,15 @@
 'use strict';
-var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
+
+const yeoman = require('yeoman-generator');
+const mkdirp = require('mkdirp');
+const yosay = require('yosay');
+const chalk = require('chalk');
 
 module.exports = yeoman.Base.extend({
+  initializing: function () {
+    this.props = {};
+  },
   prompting: function () {
-    // Have Yeoman greet the user.
     this.log(yosay(
       'Welcome to the rad ' + chalk.red('Android Boilerplate ') + ' generator!'
     ));
@@ -43,7 +47,7 @@ module.exports = yeoman.Base.extend({
   },
 
   writing: function () {
-    this.copy('gitignore', '.gitignore');
+    this.copy('.gitignore', '.gitignore');
     this.copy('build.gradle', 'build.gradle');
     this.copy('gradle.properties', 'gradle.properties');
     this.copy('gradlew', 'gradlew');
@@ -62,7 +66,7 @@ module.exports = yeoman.Base.extend({
     mkdirp('app/src/main/java/' + packageDir);
     mkdirp('app/src/test/java/' + packageDir);
 
-    this.copy('app/gitignore', 'app/.gitignore');
+    this.copy('app/.gitignore', 'app/.gitignore');
     this.copy('app/proguard-rules.pro', 'app/proguard-rules.pro');
     this.template('app/build.gradle', 'app/build.gradle');
     this.template('app/src/androidTest/java/uk/co/ribot/androidboilerplate', 'app/src/androidTest/java/' + packageDir, this, {});
