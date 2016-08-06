@@ -9,7 +9,7 @@ const filter = require('filter-files');
 const findInFiles = require('find-in-files');
 
 // Clone a given repository into the `./tmp` folder.
-rimraf.sync(__dirname + '/templates')
+rimraf.sync(__dirname + '../generators/app/templates')
 
 Git.Clone("https://github.com/ribot/android-boilerplate", "../generators/app/templates")
   // Look up this known commit.
