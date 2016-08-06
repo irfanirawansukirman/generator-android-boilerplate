@@ -73,6 +73,7 @@ module.exports = yeoman.Base.extend({
     this.directory('config', 'config');
     this.directory('images', 'images');
     this.directory('app/src/main/assets', 'app/src/main/assets');
+    this.directory('app/keystore', 'app/keystore');
 
     this.copy('gitignore', '.gitignore');
     this.copy('build.gradle', 'build.gradle');
