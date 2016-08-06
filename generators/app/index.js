@@ -57,6 +57,8 @@ module.exports = yeoman.Base.extend({
     mkdirp('app/src/test/java/' + packageDir);
 
     this.directory('gradle', 'gradle');
+    this.directory('config', 'config');
+    this.directory('images', 'images');
     this.directory('app/src/main/assets', 'app/src/main/assets');
 
     this.copy('gitignore', '.gitignore');
