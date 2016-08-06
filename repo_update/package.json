@@ -1,0 +1,25 @@
+{
+  "name": "android-boilerplate-update",
+  "version": "0.0.1",
+  "description": "Node script to update android-boilerplate from https://github.com/ribot/android-boilerplate.",
+  "main": "index.js",
+  "dependencies": {
+    "filter-files": "^0.4.0",
+    "find-in-files": "^0.3.1",
+    "nodegit": "^0.14.1",
+    "path": "^0.12.7",
+    "renamer": "^0.5.7",
+    "replace": "^0.3.0",
+    "rimraf": "^2.5.4",
+    "string-search": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "android"
+  ],
+  "author": "Ravindra Kumar <ravindrakumar8088@gmail.com> (https://github.com/ravidsrk/)",
+  "license": "MIT"
+}
