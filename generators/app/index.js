@@ -17,11 +17,20 @@ module.exports = yeoman.Base.extend({
       name: 'name',
       message: 'What are you calling your app?',
       store: true,
-      default: this.appname // Default to current folder name
+      default: this.appname,
+      validate: function (input) {
+        if (/^([a-zA-Z0-9_]*)$/.test(input)) return true;
+        return 'Your application name cannot contain special characters or a blank space, using the default name instead : ' + defaultAppBaseName;
+      }
     },
       {
         name: 'package',
         message: 'What package will you be publishing the app under?',
+        validate: function (input) {
+          if (/^([a-z_]{1}[a-z0-9_]*(\.[a-z_]{1}[a-z0-9_]*)*)$/.test(input)) return true;
+          return 'The package name you have provided is not a valid Java package name.';
+        },
+        default: 'in.boilerplate.sample',
         store: true
       },
       {
