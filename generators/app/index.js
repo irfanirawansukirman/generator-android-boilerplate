@@ -59,13 +59,13 @@ module.exports = yeoman.Base.extend({
     this.directory('gradle', 'gradle');
     this.directory('app/src/main/assets', 'app/src/main/assets');
 
-    this.copy('.gitignore', '.gitignore');
+    this.copy('gitignore', '.gitignore');
     this.copy('build.gradle', 'build.gradle');
     this.copy('gradle.properties', 'gradle.properties');
     this.copy('gradlew', 'gradlew');
     this.copy('gradlew.bat', 'gradlew.bat');
     this.copy('settings.gradle', 'settings.gradle');
-    this.copy('app/.gitignore', 'app/.gitignore');
+    this.copy('app/gitignore', 'app/.gitignore');
     this.copy('app/proguard-rules.pro', 'app/proguard-rules.pro');
 
     this.template('README.md', 'README.md');
