@@ -70,7 +70,6 @@ module.exports = yeoman.Base.extend({
     mkdirp('app/src/main/java/' + packageDir);
     mkdirp('app/src/test/java/' + packageDir);
     mkdirp('app/src/test/java/' + packageDir);
-  
 
     this.directory('gradle', 'gradle');
     this.directory('config', 'config');
