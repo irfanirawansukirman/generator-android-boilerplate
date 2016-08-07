@@ -66,13 +66,17 @@ module.exports = yeoman.Base.extend({
     mkdirp('app/src/commonTest/java/' + packageDir);
     mkdirp('app/src/debug');
     mkdirp('app/src/main/assets');
+    mkdirp('app/src/main/res');
     mkdirp('app/src/main/java/' + packageDir);
     mkdirp('app/src/test/java/' + packageDir);
+    mkdirp('app/src/test/java/' + packageDir);
+  
 
     this.directory('gradle', 'gradle');
     this.directory('config', 'config');
     this.directory('images', 'images');
     this.directory('app/src/main/assets', 'app/src/main/assets');
+    this.directory('app/src/main/res', 'app/src/main/res');
     this.directory('app/keystore', 'app/keystore');
 
     this.copy('gitignore', '.gitignore');
@@ -91,7 +95,7 @@ module.exports = yeoman.Base.extend({
     this.template('app/src/debug/AndroidManifest.xml', 'app/src/debug/AndroidManifest.xml');
     this.template('app/src/main/AndroidManifest.xml', 'app/src/main/AndroidManifest.xml');
     this.template('app/src/main/java/uk/co/ribot/androidboilerplate', 'app/src/main/java/' + packageDir, this, {});
-    this.template('app/src/main/res', 'app/src/main/res', this, {});
+    this.template('app/src/main/res/layout', 'app/src/main/res/layout', this, {});
     this.template('app/src/test/java/uk/co/ribot/androidboilerplate', 'app/src/test/java/' + packageDir, this, {});
   }
 });
