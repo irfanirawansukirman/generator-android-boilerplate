@@ -1,6 +1,6 @@
 {
   "name": "generator-android-boilerplate",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Android app generator using https://github.com/ribot/android-boilerplate.",
   "homepage": "ls",
   "author": {
