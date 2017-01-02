@@ -17,6 +17,7 @@ import <%= appPackage %>.BoilerplateApplication;
 import <%= appPackage %>.data.model.Ribot;
 import <%= appPackage %>.util.AndroidComponentUtil;
 import <%= appPackage %>.util.NetworkUtil;
+import <%= appPackage %>.util.RxUtil;
 
 public class SyncService extends Service {
 
@@ -48,7 +49,7 @@ public class SyncService extends Service {
             return START_NOT_STICKY;
         }
 
-        if (mSubscription != null && !mSubscription.isUnsubscribed()) mSubscription.unsubscribe();
+        RxUtil.unsubscribe(mSubscription);
         mSubscription = mDataManager.syncRibots()
                 .subscribeOn(Schedulers.io())
                 .subscribe(new Observer<Ribot>() {
